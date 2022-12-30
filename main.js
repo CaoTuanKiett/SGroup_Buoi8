@@ -1,28 +1,32 @@
 
-function fibonaciii(num){
-    let a;
-    if (num<=1) return 1;
-    return a = fibonaciii(num - 1) + fibonaciii(num -2);
-    
-}
 
-console.log(fibonaciii(7))
+function fibonaci() {
+
+    let num = document.getElementById("txtFibo").value ;
+
+    let a = 1, b = 0, temp = 1;
+  
+    while(num >= 0) {
+      temp = a;
+      a = a + b;
+      b = temp;
+      num --;
+    }
+    alert(b);
+  }
 
 
 
-const maxchan = (nums) => {
+const maxchan = () => {
+    let nums = document.getElementById("txtMaxChan").value ;
     let xmax = -1;
     for (let i = 0; i < nums.length; i++) {
         if(nums[i] % 2 == 0 && nums[i] > xmax ){
             xmax = nums[i];
         }
     }
-    return xmax
+    alert(xmax) 
 }
-
-console.log(maxchan([0,2,3,4,7,8])) 
-
-
 
 
 

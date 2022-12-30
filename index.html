@@ -4,6 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .app{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom, #636363, #a2ab58);
+        }
+
+        .wrap input {
+            margin-bottom: 70px;
+            padding: 10px 10px;
+            border: none;
+            background-color: rgb(178, 222, 169);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        .wrap #btnFibo {
+            background-color: rgb(68, 60, 18);
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+        .wrap #btMaxChan {
+            background-color: rgb(34, 25, 124);
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+    </style>
  
     <title>Document</title>
 </head>
@@ -14,21 +56,21 @@
 
             <input id="txtMaxChan" type="text">
     
-            <input id="btMaxChan" type="button" value="MaxChan">
+            <input onclick="maxchan()" id="btMaxChan" type="button" value="MaxChan">
     
         </div>
     
         <div class="wrap">
     
-            <input id="txtFibo" type="text">
+            <input id="txtFibo" type="number">
     
-            <input id="btnFibo" onclick="fibonaciii()" type="button" value="Fibonaci">
+            <input id="btnFibo" onclick="fibonaci()" type="button" value="Fibonaci">
     
         </div>
-
-        <p id="result">...</p>
     </div>
 
+
     <script src="./main.js"></script>
+
 </body>
 </html>
